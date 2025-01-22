@@ -2,6 +2,7 @@
 echo Installing apache2...
 sudo apt update -y
 sudo apt install apache2
+sudo rm -rf /var/www/html
 echo Installing rpl for renaming...
 sudo apt install rpl
 
