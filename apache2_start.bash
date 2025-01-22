@@ -1,6 +1,6 @@
 #!/bin/bash
 echo Installing apache2...
-sudo apt update
+sudo apt update -y
 sudo apt install apache2
 echo Installing rpl for renaming...
 sudo apt install rpl
@@ -22,17 +22,17 @@ echo Enabling the website...
 sudo a2ensite buildings-site.conf
 
 echo Reloading apache2...
-sudo service apache2 restart
+sudo service apache2 reload
 
 echo Enabling mod for https ssl...
 sudo a2enmod ssl
-sudo service apache2 restart
+sudo service apache2 reload
 
 echo Generating OpenSSl certificate, Please answer questions...
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/apache2/ssl/test.com.key -out /etc/apache2/ssl/test.com.crt
 
 echo Starting up website:
-sudo service apache2 restart
+sudo service apache2 reload
 
 echo Complete.
 echo The site is now active, place the unity build files at the location $SITE_LOCATION
