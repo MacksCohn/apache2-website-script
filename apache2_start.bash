@@ -29,6 +29,7 @@ sudo a2enmod ssl
 sudo service apache2 reload
 
 echo Generating OpenSSl certificate, Please answer questions...
+sudo mkdir /etc/apache2/ssl
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/apache2/ssl/test.com.key -out /etc/apache2/ssl/test.com.crt
 
 echo Starting up website:
