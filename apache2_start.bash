@@ -21,6 +21,7 @@ rpl "/var/www/hosting" $SITE_LOCATION /etc/apache2/sites-available/buildings-sit
 
 echo Enabling the website...
 sudo a2ensite buildings-site.conf
+sudo a2dissite 000-default.conf
 
 echo Enabling mod for https ssl...
 sudo a2enmod ssl
