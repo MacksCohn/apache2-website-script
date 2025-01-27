@@ -1,10 +1,10 @@
 #!/bin/bash
 echo Installing apache2...
 sudo apt update -y
-sudo apt install apache2
+sudo apt install apache2 -y
 sudo rm -rf /var/www/html
 echo Installing rpl for renaming...
-sudo apt install rpl
+sudo apt install rpl -y 
 
 export SITE_LOCATION="/var/www/building"
 echo Using environment variable SITE_LOCATION with current value $SITE_LOCATION
