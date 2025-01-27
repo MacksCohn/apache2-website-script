@@ -1,4 +1,5 @@
 #!/bin/bash
+echo IMPORTANT:MAKE SURE THIS CONTAINER ALLOWS HTTPS ACCESS SO PORT 443 WILL BE OPEN
 echo Installing apache2...
 sudo apt update -y
 sudo apt install apache2 -y
